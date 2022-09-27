@@ -1,2 +1,2 @@
 ### Концептуальний опис архітектури програмного продукту
-![image](https://user-images.githubusercontent.com/78159992/192140609-2b274f7b-8ece-4367-8200-056634c501e3.png)
+![image](https://github.com/oleksandrblazhko/ai201-stepanenko/blob/ai201-stepanenko_with_laboratory_work_4/1-SoftwareRequirements/1.5-SoftwareProjectPlanning/1.5.1-SoftwareArchitectConcept/SAC.drawio%20(1).png)
