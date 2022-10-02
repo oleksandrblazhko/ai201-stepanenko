@@ -80,7 +80,7 @@
           ]
         },
           "food": {
-          "description": "Опис курсу",
+          "description": "Замовлення їжі",
           "type": "object",
           "properties": {
             "market name": {
@@ -107,7 +107,7 @@
           ]
         },
         "order": {
-          "description": "Опис курсу",
+          "description": "Опис замовлення",
           "type": "object",
           "properties": {
             "order id": {
