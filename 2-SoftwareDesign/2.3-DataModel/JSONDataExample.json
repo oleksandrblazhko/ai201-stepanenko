@@ -1,0 +1,32 @@
+{
+  "сonsumer": {
+    "name": "Lev",
+    "surname":"Stepanenko",
+    "credit card":673526123,
+    "consumer id": 345,
+    "lector": {
+      	"name": "Lev",
+    	"surname":"Stepanenko",
+    	"lector card":537653352,
+    	"lector id": 723,
+        "location": "Odesa"
+    },
+    "courses": {
+      "сourse name": "Введеня у БД Oracle",
+      "lector id": 723,
+      "consumer id": 345
+    },
+    "food": {
+      "food list": [ "Cola", "Snacks", "Burger" ],
+      "store card": 72352352,
+      "consumer id": 345,
+      "market location": "Odesa",
+    },
+    "order": {
+      "order id": 1,
+      "seller card": 723,
+      "consumer card": 345,
+      "product": [ "Cola", "Snacks", "Burger",]
+    }
+  }
+}
