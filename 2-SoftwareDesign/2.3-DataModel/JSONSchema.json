@@ -1,0 +1,145 @@
+{
+  "description": "Опис предметної області ПП",
+  "type": "object",
+  "properties": {
+    "сonsumer": {
+      "description": "Інформація про користувача",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Iм'я користувача",
+          "type": "string"
+        },
+        "surname": {
+          "description": "Прізвище користувача",
+          "type": "string"
+        },
+        "credit card": {
+          "description": "Карта користувача",
+          "type": "integer"
+        },
+        "location": {
+          "description": "Місцезнаходження",
+          "type": "string"
+        },
+        "consumer id": {
+          "description": "Id користувача",
+          "type": "integer"
+        },
+        "lector": {
+          "description": "Опис споживача",
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Iм'я користувача",
+              "type": "string"
+            },
+            "surname": {
+              "description": "Прізвище лектора",
+              "type": "string"
+            },
+            "lector card": {
+              "description": "Карта лектора",
+              "type": "integer"
+            },
+            "location": {
+              "description": "Місцезнаходження",
+              "type": "string"
+            },
+            "lector id": {
+              "description": "Id лектора",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "lector card",
+            "location",
+            "lector id"
+          ]
+        },
+        "courses": {
+          "description": "Опис курсу",
+          "type": "object",
+          "properties": {
+            "сourse name": {
+              "description": "Id курсу",
+              "type": "string"
+            },
+            "lector id": {
+              "description": "Id лектору",
+              "type": "integer"
+            },
+            "consumer id": {
+              "description": "Id споживача",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "сourse name",
+            "lector id",
+          ]
+        },
+          "food": {
+          "description": "Замовлення їжі",
+          "type": "object",
+          "properties": {
+            "market name": {
+              "description": "Назва магазину",
+              "type": "integer"
+            },
+            "food list": {
+              "description": "Cписок замовлених товарів",
+              "type": "array"
+            },
+            "market location": {
+              "description": "Розташування магазину",
+              "type": "string"
+            },
+            "store card": {
+              "description": "Замовлений продукт",
+              "type": "integer"
+            }
+          },
+            "required": [
+            "food list",
+            "store card",
+            "market location",
+          ]
+        },
+        "order": {
+          "description": "Опис замовлення",
+          "type": "object",
+          "properties": {
+            "order id": {
+              "description": "Id замовлення",
+              "type": "integer"
+            },
+            "seller card": {
+              "description": "Карта продавця",
+              "type": "integer"
+            },
+            "consumer card": {
+              "description": "Карта споживача",
+              "type": "integer"
+            },
+            "product": {
+              "description": "Замовлений продукт",
+              "type": "array"
+            }
+          },
+          "required": [
+            "consumer card",
+            "product",
+            "order id",
+            "seller card"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "surname",
+        "consumer id"
+      ]
+    }
+  }
+}
