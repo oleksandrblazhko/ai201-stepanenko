@@ -1,0 +1,202 @@
+{
+  "description": "Опис предметної області ПП",
+  "type": "object",
+  "properties": {
+    "сonsumer": {
+      "description": "Інформація про користувача",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Iм'я користувача",
+          "type": "string",
+          "minLength": 1,
+  	  	  "maxLength": 10,
+          "pattern": "^[a-z_]+$"
+        },
+        "surname": {
+          "description": "Прізвище користувача",
+          "type": "string",
+          "minLength": 1,
+  	  	  "maxLength": 20,
+          "pattern": "^[a-z_]+$"
+        },
+        "credit card": {
+          "description": "Карта користувача",
+          "type": "integer",
+		  "minLength": 13,
+          "maxLength": 15,
+          "pattern": "^[0-9]+$"
+        },
+        "location": {
+          "description": "Місцезнаходження",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+            "pattern": "^[0-9]+$"
+        },
+        "consumer id": {
+          "description": "Id користувача",
+          "type": "integer",
+           "maxLength": 1000,
+           "pattern": "^[0-9]+$"
+        },
+        "lector": {
+          "description": "Опис споживача",
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Iм'я користувача",
+              "type": "string",
+               "minLength": 1,
+  	  	  	   "maxLength": 10,
+          	   "pattern": "^[a-z_]+$"
+            },
+            "surname": {
+              "description": "Прізвище лектора",
+              "type": "string",
+              "minLength": 1,
+  	  	  	  "maxLength": 20,
+          	  "pattern": "^[a-z_]+$"
+            },
+            "lector card": {
+              "description": "Карта лектора",
+              "type": "integer",
+              "minLength": 13,
+          	  "maxLength": 15,
+           	  "pattern": "^[0-9]+$"
+            },
+            "location": {
+              "description": "Місцезнаходження",
+              "type": "array",
+          	  "minItems": 3,
+          	  "maxItems": 3,
+              "pattern": "^[0-9]+$"
+            },
+            "lector id": {
+              "description": "Id лектора",
+              "type": "integer",
+              "maxLength": 200,
+           	  "pattern": "^[0-9]+$"
+            }
+          },
+          "required": [
+            "lector card",
+            "location",
+            "lector id"
+          ]
+        },
+        "courses": {
+          "description": "Опис курсу",
+          "type": "object",
+          "properties": {
+            "сourse name": {
+              "description": "Id курсу",
+              "type": "string",
+               "minLength": 1,
+  	  	  	   "maxLength": 35,
+               "pattern": "^[a-z0-9_]+$"
+            },
+            "lector id": {
+              "description": "Id лектору",
+              "type": "integer",
+              "maxLength": 200,
+           	  "pattern": "^[0-9]+$"
+            },
+            "consumer id": {
+              "description": "Id споживача",
+              "type": "integer",
+           	  "maxLength": 1000,
+           	  "pattern": "^[0-9]+$"
+            }
+          },
+          "required": [
+            "сourse name",
+            "lector id",
+          ]
+        },
+          "food": {
+          "description": "Замовлення їжі",
+          "type": "object",
+          "properties": {
+            "market name": {
+              "description": "Назва магазину",
+              "type": "string",
+              "minLength": 1,
+  	  	  	  "maxLength": 30,
+              "pattern": "^[a-z0-9_]+$"
+            },
+            "food list": {
+              "description": "Cписок замовлених товарів",
+              "type": "array",
+              "minItems": 1,
+          	  "maxItems": 10,
+              "pattern": "^[a-z0-9_]+$"
+            },
+            "market location": {
+              "description": "Розташування магазину",
+              "type": "array",
+              "minItems": 3,
+          	  "maxItems": 3,
+              "pattern": "^[0-9]+$"
+            },
+            "store card": {
+              "description": "Карта магазину",
+              "type": "integer",
+              "minLength": 13,
+          	  "maxLength": 15,
+           	  "pattern": "^[0-9]+$"
+            }
+          },
+            "required": [
+            "food list",
+            "store card",
+            "market location",
+          ]
+        },
+        "order": {
+          "description": "Опис замовлення",
+          "type": "object",
+          "properties": {
+            "order id": {
+              "description": "Id замовлення",
+              "type": "integer"
+            },
+            "seller card": {
+              "description": "Карта продавця",
+              "type": "integer",
+              "minLength": 13,
+          	  "maxLength": 15,
+           	  "pattern": "^[0-9]+$"
+            },
+            "consumer card": {
+              "description": "Карта споживача",
+              "type": "integer",
+              "type": "integer",
+              "minLength": 13,
+          	  "maxLength": 15,
+           	  "pattern": "^[0-9]+$"
+            },
+            "product": {
+              "description": "Замовлений продукт",
+              "type": "array",
+               "minItems": 1,
+          	  "maxItems": 10,
+              "pattern": "^[a-z0-9_]+$"
+            }
+          },
+          "required": [
+            "consumer card",
+            "product",
+            "order id",
+            "seller card"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "surname",
+        "consumer id"
+      ]
+    }
+  }
+}
