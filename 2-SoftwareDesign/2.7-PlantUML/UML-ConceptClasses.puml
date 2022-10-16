@@ -11,7 +11,7 @@ Class Lector
 Consumer <|-- Lector
 
 Course"*" o-- "*"Consumer 
-Consumer"1" *-- "*"Order : form >
-Course"1" *-- "*"Order : form >
+Consumer"1" --> "*"Order : form 
+Course"1" --> "*"Order : form 
 
 @enduml
