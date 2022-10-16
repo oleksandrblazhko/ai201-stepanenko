@@ -2,7 +2,6 @@
 
 title Deployment for Information System
 left to right direction
-
 node <<Desktop computer>> as dk {
 	node <<OS Windows>> {
 		node <<Web browser>> {
