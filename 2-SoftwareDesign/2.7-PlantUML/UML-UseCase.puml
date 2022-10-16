@@ -6,9 +6,9 @@ skinparam packageStyle rect
 actor User
 
 rectangle Software {
-User --> (User Authorization)
-(Food Order) ..> (User Authorization) : <<include>>
-(Cahs Check) ..> (User Authorization) : <<include>>
-(Course Order) ..> (User Authorization) : <<include>>
+  User --> (User Authorization)
+  (Food Order) ..> (User Authorization) : <<include>>
+  (Cahs Check) ..> (User Authorization) : <<include>>
+  (Course Order) ..> (User Authorization) : <<include>>
 }
 @enduml
