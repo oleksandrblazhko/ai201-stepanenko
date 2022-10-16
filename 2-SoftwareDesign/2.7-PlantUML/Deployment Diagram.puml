@@ -1,7 +1,6 @@
 @startuml
 
 title Deployment for information System
-
 left to right direction
 
 node :<<Desktop computer>>: as dk {
