@@ -4,9 +4,11 @@ title Deployment for information System
 
 left to right direction
 
-node :<<Desktop1>>: as dk {
-	node :<<OS>>: {
-		component [Rich Web Application1]
+node :<<Desktop computer>>: as dk {
+	node :<<OS Windows>>: {
+		node :<<Web browser>>: {
+			component [.js (angular)]
+		}
 	}
 }
 
