@@ -13,7 +13,6 @@ node :<<Desktop computer>>: as dk {
 }
 
 interface Keyboard
-
 interface Mouse
 
 Keyboard -- dk
