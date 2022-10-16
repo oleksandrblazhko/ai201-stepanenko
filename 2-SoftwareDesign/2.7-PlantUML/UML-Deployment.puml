@@ -1,18 +1,22 @@
 @startuml
 
-title Deployment for Information System
+title Deployment for information System
+
 left to right direction
-node <<Desktop computer>> as dk {
-	node <<OS Windows>> {
-		node <<Web browser>> {
-			component [.js (angular)]
-		}
-	}   
+
+node :<<Desktop1>>: as dk {
+	node :<<OS>>: {
+		component [Rich Web Application1]
+	}
 }
 
 interface Keyboard
+
 interface Mouse
+
 Keyboard -- dk
+
 Mouse -- dk
 
 @enduml
+
