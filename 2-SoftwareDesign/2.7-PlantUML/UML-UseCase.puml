@@ -5,7 +5,7 @@ skinparam packageStyle rect
 
 actor User
 
-rectangle Software {
+rectangle {
   User --> (User Authorization)
   (Food Order) ..> (User Authorization) : <<include>>
   (Cahs Check) ..> (User Authorization) : <<include>>
