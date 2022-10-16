@@ -1,0 +1,17 @@
+@startuml
+
+title Concept of Classes Diagram 
+
+Class Consumer
+Class Course
+Class Order
+Class Lector
+
+
+Consumer <|-- Lector
+
+Course"*" o-- "*"Consumer 
+Consumer"1" *-- "*"Order : form >
+Course"1" *-- "*"Order : form >
+
+@enduml
