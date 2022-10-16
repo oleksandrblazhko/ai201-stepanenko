@@ -1,6 +1,6 @@
 @startuml
 
-title Deployment for information System
+title Deployment for Information System
 left to right direction
 
 node :<<Desktop computer>>: as dk {
@@ -12,6 +12,7 @@ node :<<Desktop computer>>: as dk {
 }
 
 interface Keyboard
+
 interface Mouse
 
 Keyboard -- dk
