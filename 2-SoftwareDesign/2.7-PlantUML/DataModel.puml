@@ -1,0 +1,25 @@
+@startjson
+
+title JSON Data
+{
+  "сonsumer": {
+    "name": "Lev",
+    "surname":"Stepanenko",
+    "credit card":673526123,
+    "lector": {
+      	"name": "Lev",
+    	"surname":"Stepanenko",
+    	"lector card":537653352,
+        "location": "Odesa"
+    },
+    "courses": {
+      "сourse name": "Введеня у БД Oracle"
+    },
+    "order": {
+      "seller card": 723,
+      "consumer card": 345,
+      "product": [ "Введеня у БД Oracle"]
+    }
+  }
+}
+@endjson
