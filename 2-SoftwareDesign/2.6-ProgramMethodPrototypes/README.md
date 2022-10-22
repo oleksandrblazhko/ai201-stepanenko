@@ -2,7 +2,7 @@
 |FR    |Опис вимоги   |Назва класу |Назва методу класу|
 |:-    |:-            |:-          |:-                |
 | FR1.1 | Лектор розташовує опис курсу у вбудованому конструктору | Lector | create_description(string) |
-| FR1.2 | Лектор створює розклад занять | Lector | create_timetable(string)  |
+| FR1.2 | Лектор створює розклад занять | Lector | create_timetable(course_date, time)  |
 | FR1.3 | Система робить первісну перевірку вимог | Course | machine_check(string) |
 | FR1.4 | Система передає інформацію про курс адміністратору для кінцевої перевірки | Course | admin_check(string) |
 | FR2.1 | Користувач надає інформацію про своє місцезнаходження ПП | Сonsumer | location_sharing(array) |
