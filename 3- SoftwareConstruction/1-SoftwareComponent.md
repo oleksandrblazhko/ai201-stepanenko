@@ -1,5 +1,5 @@
 |Тип програмної <br> компоненти|Назва, версія програмної <br> компоненти|Місце розташування <br> програмної компоненти|
 |:-:|:-:|:-:|
-IDE|||
-Application Server||хмарне розташування|
-DataBase Server|MongoDB 6.0|хмарне розташування<br>https://cloud.mongodb.com/|
+IDE|MongoDB Compas|(AWS(хмарне розташування)|
+Application Server||(AWS(хмарне розташування)|
+DataBase Server|MongoDB 6.0|(AWS(хмарне розташування)|
