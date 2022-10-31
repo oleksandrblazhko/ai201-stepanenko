@@ -1,5 +1,5 @@
 |Тип програмної <br> компоненти|Назва, версія програмної <br> компоненти|Місце розташування <br> програмної компоненти|
 |:-:|:-:|:-:|
 IDE|PyCharm Community Edition 2021.3.3|локальне розташування|
-Application Server|||
+Application Server|WSGI|локальне розташування|
 DataBase Server|MongoDB 6.0|(AWS(хмарне розташування)|
