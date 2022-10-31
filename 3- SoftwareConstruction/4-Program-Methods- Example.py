@@ -1,3 +1,4 @@
+# Мова програмування Python
 class Consumer:
     def __init__(self, name, surname, consumer_id, credit_card, consumer_location):
         self.name = name
