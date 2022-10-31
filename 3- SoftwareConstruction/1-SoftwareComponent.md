@@ -1,5 +1,5 @@
 |Тип програмної <br> компоненти|Назва, версія програмної <br> компоненти|Місце розташування <br> програмної компоненти|
 |:-:|:-:|:-:|
-IDE|MongoDB Compas|(AWS(хмарне розташування)|
-Application Server||(AWS(хмарне розташування)|
+IDE|PyCharm Community Edition 2021.3.3|локальне розташування|
+Application Server|||
 DataBase Server|MongoDB 6.0|(AWS(хмарне розташування)|
