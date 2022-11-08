@@ -28,36 +28,32 @@ class Courses:
         if(len(hours) == 2 and len(minut) == 2 and hours.isdigit() and minut.isdigit() and int(hours)<=23 and int(minut)<=60):
             return hours, minut
         else:
-            raise ValueError("Time format error.")
+            raise ValueError("Результат = -1.")
 
     def set_data(self,day,month,year): # Зміна дати
         #self.course_date = input("Нова дата заняття")
         if(len(day)==2 and len(month)==2 and len(year)==4 and int(day)<=31 and int(month)<=12 and int(year)>=2022):
             return day, month, year
         else:
-            raise ValueError("Data format error.")
+            raise ValueError("Результат = -2")
 
-    def create_lesson(self): # Створюемо заняття
-        lesson_name = self.set_lesson(input()) # Вводимо назву
+    def create_lesson(self,lesson_name,day,month,year,hours,minut): # Створюемо заняття
+        print("Введіть назву заняття: ")
+        lesson = self.set_lesson(lesson_name) # Вводимо назву
         print("Введіть дату: ")
-        course_date = self.set_data(input(),input(),input())# Вводимо дату
+        course_date = self.set_data(day,month,year)# Вводимо дату
         print("Введіть час: ")
-        time = self.set_time(input(),input()) # Вводимо час
+        time = self.set_time(hours,minut) # Вводимо час
         print("Дата: ",course_date)
         print("Час", time)
-        if((len(lesson_name) > 0) and (len(lesson_name) < 20) ):
-            if(len(course_date) == 8):
-                if(len(time) == 4):
-                    return course_date, time, lesson_name  # повертаємо значення до системи
-        else:
-            raise ValueError("Something has gone wrong.")
+        return course_date, time, lesson_name  # повертаємо значення до системи
 
 
     def set_lesson(self,lesson_name):# Зміна назви
         if ((len(lesson_name) > 0) and (len(lesson_name) < 20)):
             return lesson_name
         else:
-            raise ValueError("Lesson format error.")
+            raise ValueError("Результат = -3")
 
     def course_info(self): # Беремо інформацію про весь курс
         return self.course_name,self.course_date,self.lesson_name,self.time
