@@ -1,4 +1,4 @@
-# Мова програмування Python
+
 class Consumer:
     def __init__(self, name, surname, consumer_id, credit_card, consumer_location):
         self.name = name
@@ -17,32 +17,43 @@ class Consumer:
 
 class Courses:
     def __init__(self, course_name):
-        self.course_name = course_name
+        self.course_name = "null"
         self.lesson_name = "null"
         self.course_date = 0
         self.time = 0
 
-    def create_lesson(self): # Створюемо заняття
-        lesson_name = input("Введіть назву заняття") #Вводимо назву
-        course_date = input("Дата заняття") # Вводимо дату
-        time = input("Час заняття") # Вводимо час
-        return course_date,time,lesson_name # повертаємо значення до системи
+    def set_time(self, hours, minut):
+        #hours = input()
+        #minut = input()
+        if(len(hours) == 2 and len(minut) == 2 and hours.isdigit() and minut.isdigit() and int(hours)<=23 and int(minut)<=60):
+            return hours, minut
+        else:
+            raise ValueError("Результат = -1.")
 
-    def time_to_lesson(self,current_time): # Час до заняття
-        time_to_les = self.time - current_time # обчислюємо різниця
-        return time_to_les # повертаємо інформацію до системи
+    def set_data(self,day,month,year): # Зміна дати
+        #self.course_date = input("Нова дата заняття")
+        if(len(day)==2 and len(month)==2 and len(year)==4 and int(day)<=31 and int(month)<=12 and int(year)>=2022):
+            return day, month, year
+        else:
+            raise ValueError("Результат = -2")
 
-    def data_change(self): # Зміна дати
-        self.course_date = input("Нова дата заняття")
-        return self.course_date
+    def create_lesson(self,lesson_name,day,month,year,hours,minut): # Створюемо заняття
+        print("Введіть назву заняття: ")
+        lesson = self.set_lesson(lesson_name) # Вводимо назву
+        print("Введіть дату: ")
+        course_date = self.set_data(day,month,year)# Вводимо дату
+        print("Введіть час: ")
+        time = self.set_time(hours,minut) # Вводимо час
+        print("Дата: ",course_date)
+        print("Час", time)
+        return course_date, time, lesson_name  # повертаємо значення до системи
 
-    def time_change(self):# Зміни часу
-        self.time = input("Новий час заняття")
-        return self.time
 
-    def lesson_change(self):# Зміна назви
-        self.lesson_name = input("Новий назва заняття")
-        return self.lesson_name
+    def set_lesson(self,lesson_name):# Зміна назви
+        if ((len(lesson_name) > 0) and (len(lesson_name) < 20)):
+            return lesson_name
+        else:
+            raise ValueError("Результат = -3")
 
     def course_info(self): # Беремо інформацію про весь курс
         return self.course_name,self.course_date,self.lesson_name,self.time
